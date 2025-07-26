@@ -9,9 +9,7 @@ function run() {
     try {
         mongodb.connect();
         console.log("success");
-    } catch {
-        console.log("error");
-    }
+    } catch {}
 }
 run();
 var app = express();
