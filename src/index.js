@@ -1,6 +1,6 @@
 var express = require("express");
 var mongo = require("mongod");
-const port = 3000;
+const port = 8080;
 const uri =
     "mongodb+srv://pratyakshkarmahe:<db_password>@cluster0.wl92lfz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 var mongodb = new mongo(uri);
@@ -15,6 +15,10 @@ run();
 var app = express();
 app.use(express.static("public"));
 app.get("/", (req, res) => {
-    res.send("<h1>hello world</h1>");
+    res.sendFile(
+        "/media/pratyaksh/New Volume/github/web/public/views/home.html",
+    );
 });
-app.listen(port);
+app.listen(port, () => {
+    console.log("server is running");
+});
