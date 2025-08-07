@@ -16,7 +16,7 @@ var app = express();
 app.use(express.static("public"));
 app.get("/", (req, res) => {
     res.sendFile(
-        "public/views/home.html",
+        "/media/pratyaksh/New Volume/github/web/public/views/home.html",
     );
 });
 app.listen(port, () => {
